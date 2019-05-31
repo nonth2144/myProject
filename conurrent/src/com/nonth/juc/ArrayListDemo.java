@@ -3,7 +3,6 @@ package com.nonth.juc;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -31,6 +30,7 @@ public class ArrayListDemo {
                 System.out.println(Thread.currentThread().getName()+"\t"+list1);
                 latch.countDown();
             },String.valueOf(i)).start();
+            System.out.println("n你好啊，git");
         }
         latch.await();
         Instant end = Instant.now();
