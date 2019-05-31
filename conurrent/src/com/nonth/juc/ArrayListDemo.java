@@ -30,7 +30,6 @@ public class ArrayListDemo {
                 System.out.println(Thread.currentThread().getName()+"\t"+list1);
                 latch.countDown();
             },String.valueOf(i)).start();
-            System.out.println("n你好啊，git");
         }
         latch.await();
         Instant end = Instant.now();
